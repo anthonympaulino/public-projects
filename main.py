@@ -1,11 +1,14 @@
 
 import smtplib
 from email.message import EmailMessage
+import os
+
 
 smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
 sender = "anthonympaulino1@gmail.com"  #this is the sender
-password = "zbcbfawfjbwcxcwg" # 16-digit code
+
+password = os.environ.get("MY_EMAIL_PASS")
 receiver = "anthonymichael680@gmail.com, boldengbol700@gmail.com"  #this is the receiver
 subject = "bol"
 message = "Hello, how are you?????"
