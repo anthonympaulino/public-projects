@@ -16,6 +16,7 @@ from email.message import EmailMessage
 import tkinter as tk
 from tkinter import filedialog
 import mimetypes
+import os
 
 
 smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465)
@@ -24,7 +25,7 @@ smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
 
 sender = "anthonympaulino1@gmail.com"  #this is the sender
-password = "zbcbfawfjbwcxcwg" # 16-digit code
+password = os.environ.get("MY_EMAIL_PASS")# 16-digit code
 
 
 msg = EmailMessage()
