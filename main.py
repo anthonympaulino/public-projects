@@ -25,7 +25,7 @@ smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 
 
 sender = "anthonympaulino1@gmail.com"  #this is the sender
-password = os.environ.get("MY_EMAIL_PASS")# 16-digit code
+password = os.environ.get("MY_EMAIL_PASS")#password
 
 
 msg = EmailMessage()
